@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Чайная номер один. Посуда</title>
+	<link rel="icon" href="5 (1).png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Ruslan+Display&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #F8F5E0;
+            font-family: 'Ruslan Display', cursive;
+        }
+        
+        .container {
+            position: relative;
+            width: 1440px;
+            height: 1024px;
+            margin: 0 auto;
+        }
+		
+        .title {
+            position: absolute;
+            width: 1057px;
+            height: 226px;
+            left: 198px;
+            top: 0px;
+            font-weight: 400;
+            font-size: 96px;
+            line-height: 104px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #000000;
+        }
+		
+        .image-group {
+            position: absolute;
+            width: 500px;
+            height: 350px;
+            cursor: pointer;
+        }
+        
+        .image-group:hover .image-text {
+            color: red;
+            text-shadow: 0 0 2px red;
+            -webkit-text-stroke: 0;
+            text-stroke: 0;
+        }
+        
+        .image-bg {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .image-text {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 21.71%;
+            bottom: 0;
+            font-weight: 400;
+            font-size: 96px;
+            line-height: 104px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transition: all 0.3s ease;
+            font-family: 'Ruslan Display', cursive;
+            color: transparent;
+            -webkit-text-stroke: 2px black;
+            text-stroke: 2px black;
+        }
+        
+        .group-26 {
+            left: 208px;
+            top: 213px;
+        }
+        
+        .group-26 .image-bg {
+            background-image: url('images/11.jpg');
+        }
+        
+        .group-27 {
+            left: 755px;
+            top: 213px;
+        }
+        
+        .group-27 .image-bg {
+            background-image: url('images/12.jpg');
+        }
+        
+        .group-28 {
+            left: 208px;
+            top: 627px;
+        }
+        
+        .group-28 .image-bg {
+            background-image: url('images/13.jpg');
+        }
+        
+        .group-30 {
+            left: 755px;
+            top: 627px;
+        }
+        
+        .group-30 .image-bg {
+            background-image: url('images/14.jpg');
+        }
+        
+        .back-button {
+            position: absolute;
+            width: 45px;
+            height: 45px;
+            left: 30px;
+            top: 30px;
+            border: #FFFFFF;
+            background: #000000;
+            border-radius: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .back-button::before,
+        .back-button::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 2px;
+            background: #F8F5E0;
+        }
+
+        .back-button::before {
+            transform: rotate(45deg);
+            left: 12px;
+            top: 22px;
+        }
+
+        .back-button::after {
+            transform: rotate(-45deg);
+            left: 12px;
+            top: 22px;
+        }
+
+        .back-button:hover {
+            transform: scale(1.1);
+        }
+		
+		/* Мобильная адаптация */
+        @media (max-width: 768px) {
+            .title { font-size: 36px; }
+            .image-text { font-size: 36px; }
+            .back-button {
+                width: 35px;
+                height: 35px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="back-button" onclick="window.location.href='catalog.html'"></div>
+    <div class="container">
+	<div class="title">посуда</div>
+        <div class="image-group group-26">
+            <div class="image-bg"></div>
+            <div class="image-text">гайвань</div>
+        </div>
+        
+        <div class="image-group group-27">
+            <div class="image-bg"></div>
+            <div class="image-text">чайник</div>
+        </div>
+        
+        <div class="image-group group-28">
+            <div class="image-bg"></div>
+            <div class="image-text">чахай</div>
+        </div>
+        
+        <div class="image-group group-30">
+            <div class="image-bg"></div>
+            <div class="image-text">пиала</div>
+        </div>
+    </div>
+	<script>
+		document.querySelector('.group-26').addEventListener('click', function() {
+        window.location.href = 'guyvan.html';
+		});
+		document.querySelector('.group-27').addEventListener('click', function() {
+        window.location.href = 'chaynik.html';
+		});
+		document.querySelector('.group-28').addEventListener('click', function() {
+        window.location.href = 'chachay.html';
+		});
+		document.querySelector('.group-30').addEventListener('click', function() {
+        window.location.href = 'piala.html';
+		});
+	</script>
+</body>
+</html>
